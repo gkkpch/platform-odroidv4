@@ -42,6 +42,17 @@ kver=`make kernelrelease`
 cp ${PLATFORM_FAMILY}/odroid-6.6.y_defconfig ${PLATFORM_DEVICE}/boot/config-${kver}
 make modules_install ARCH=arm64 INSTALL_MOD_PATH=${PLATFORM_DEVICE}
 
+echo "Compiling and copying overlay(s) files"
+for dts in "${PLATFORM_FAMILY}"/overlay_user/odroidn2/*.dts; do
+  dts_file=${dts%%.*}
+  if [ -s "${dts_file}.dts" ]
+  then
+    echo "Compiling ${dts_file}"
+    dtc -O dtb -o "${dts_file}.dtbo" "${dts_file}.dts"
+    cp "${dts_file}.dtbo" "${PLATFORM_DEVICE}/boot/amlogic/overlays/odroidn2"
+  fi
+done
+
 echo "Creating platform tar files"
 cd ${PLATFORM_FAMILY}
 cp -pdR etc ${PLATFORM_DEVICE}
