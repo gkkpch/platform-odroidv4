@@ -1,6 +1,9 @@
 {
   "cards": [
+     {"name": "ODROID-HIFI2", "multidevice": false, "prettyname": "HiFi Shield 2", "defaultmixer": "Digital","type":"i2S"},
+     {"name": "ODROID-HDMI", "multidevice": false, "prettyname": "HDMI/ TOSLINK (S/PDIF)", "defaultmixer": "","type":"integrated"},
      {"name": "G12B-ODROID-N2", "multidevice": true, "devices":[{"number":0, "prettyname": "HDMI", "defaultmixer": ""}, {"number":1, "prettyname": "Lineout", "defaultmixer": ""}, {"number":2, "prettyname": "SPDIF", "defaultmixer": ""}],"type":"integrated"},
+     {"name": "ODROID-C4", "multidevice": true, "devices":[{"number":0, "prettyname": "HDMI", "defaultmixer": ""}, {"number":1, "prettyname": "Lineout", "defaultmixer": ""}, {"number":2, "prettyname": "SPDIF", "defaultmixer": ""}],"type":"integrated"},
      {"name": "RADXA-ZERO", "multidevice": true, "devices":[{"number":0, "prettyname": "HDMI", "defaultmixer": ""}, {"number":1, "prettyname": "SPDIF", "defaultmixer": ""}, {"number":2, "prettyname": "I2S", "defaultmixer": ""}],"type":"integrated"},
      {"name": "RADXA-ZERO2", "multidevice": true, "devices":[{"number":0, "prettyname": "HDMI", "defaultmixer": ""}, {"number":1, "prettyname": "SPDIF", "defaultmixer": ""}, {"number":2, "prettyname": "I2S", "defaultmixer": ""}],"type":"integrated"} 
   ]

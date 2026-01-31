@@ -64,11 +64,10 @@ cp configs/odroidn2/* ${PLATFORM_DEVICE}/boot
 cp uboot/odroidn2/*  ${PLATFORM_DEVICE}/uboot
 tar cfJ odroidn2.tar.xz --transform='s/odroidv4/odroidn2/' ./odroidv4
 
-#echo "... odroidc4"
-#rm ${PLATFORM_DEVICE}/boot/*.ini
-#cp configs/odroidc4/* ${PLATFORM_DEVICE}/boot
-#cp uboot/odroidc4/*  ${PLATFORM_DEVICE}/uboot
-#tar cfJ odroidc4.tar.xz --transform='s/odroidv4/odroidc4/' ./odroidc4n2
+echo "... odroidc4"
+cp configs/odroidc4/* ${PLATFORM_DEVICE}/boot
+cp uboot/odroidc4/*  ${PLATFORM_DEVICE}/uboot
+tar cfJ odroidc4.tar.xz --transform='s/odroidv4/odroidc4/' ./odroidv4
 
 rm -r ${PLATFORM_DEVICE}
 echo "Done ..."
